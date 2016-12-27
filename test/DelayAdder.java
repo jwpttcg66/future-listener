@@ -34,7 +34,8 @@ public class DelayAdder {
         DelayAdditionFuture future = new DelayAdditionFuture();
         new Thread(new DelayAdditionTask(delay, a, b, future)).start();
 //        future.await();
-        future.await(1);
+        boolean result = future.await(1);
+        System.out.println(result);
         return future;
     }
 
