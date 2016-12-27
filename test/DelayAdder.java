@@ -1,14 +1,16 @@
 import com.future.ITaskFuture;
 import com.future.ITaskFutureListener;
 
+import java.util.concurrent.ExecutionException;
+
 /**
  * Created by jiangwenping on 16/12/27.
  */
 public class DelayAdder {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-        new DelayAdder().add(3 * 1000, 1, 2).addListener(new ITaskFutureListener() {
+        new DelayAdder().add(10 * 1000, 1, 2).addListener(new ITaskFutureListener() {
 
             @Override
             public void operationComplete(ITaskFuture future) throws Exception {
@@ -28,9 +30,11 @@ public class DelayAdder {
      * @param b 加数
      * @return 异步结果
      */
-    public DelayAdditionFuture add(long delay, int a, int b) {
+    public DelayAdditionFuture add(long delay, int a, int b) throws ExecutionException, InterruptedException {
         DelayAdditionFuture future = new DelayAdditionFuture();
         new Thread(new DelayAdditionTask(delay, a, b, future)).start();
+//        future.await();
+        future.await(1);
         return future;
     }
 
