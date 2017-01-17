@@ -1,4 +1,4 @@
-package com.future;
+package com.snowcattle.future;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;

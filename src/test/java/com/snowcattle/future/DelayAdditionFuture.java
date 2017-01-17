@@ -1,5 +1,4 @@
-import com.future.AbstractFuture;
-import com.future.ITaskFuture;
+package com.snowcattle.future;
 
 /**
  * Created by jiangwenping on 16/12/27.

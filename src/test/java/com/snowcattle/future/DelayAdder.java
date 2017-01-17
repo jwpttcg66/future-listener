@@ -1,5 +1,4 @@
-import com.future.ITaskFuture;
-import com.future.ITaskFutureListener;
+package com.snowcattle.future;
 
 import java.util.concurrent.ExecutionException;
 

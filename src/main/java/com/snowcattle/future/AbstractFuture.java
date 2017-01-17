@@ -1,4 +1,4 @@
-package com.future;
+package com.snowcattle.future;
 
 import java.util.Collection;
 import java.util.concurrent.CopyOnWriteArrayList;

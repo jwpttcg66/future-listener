@@ -1,6 +1,4 @@
-package com.future;
-
-import java.util.concurrent.Future;
+package com.snowcattle.future;
 
 /**
  * Created by jiangwenping on 16/12/27.
